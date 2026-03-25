@@ -1,0 +1,14 @@
+{
+  "name": "astria",
+  "description": "Persistent AI memory — remember, recall, and build knowledge across every session. Your AI never starts from zero again.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Astria",
+    "email": "support@astriaindex.com"
+  },
+  "homepage": "https://astriaindex.com",
+  "repository": "https://github.com/PL-ODIN/astria-plugin",
+  "license": "MIT",
+  "commands": ["./skills/"],
+  "mcpServers": "./mcp.json"
+}

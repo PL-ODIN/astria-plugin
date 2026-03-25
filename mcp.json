@@ -1,0 +1,9 @@
+{
+  "astria": {
+    "type": "sse",
+    "url": "${ASTRIA_ENDPOINT}/sse",
+    "headers": {
+      "Authorization": "Bearer ${ASTRIA_API_KEY}"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "astria-marketplace",
+  "owner": {
+    "name": "Astria",
+    "email": "support@astriaindex.com"
+  },
+  "metadata": {
+    "description": "Persistent AI memory that works across sessions and tools",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "astria",
+      "source": "./",
+      "description": "Persistent AI memory — remember, recall, and build knowledge across every session",
+      "version": "1.0.0",
+      "author": {
+        "name": "Astria",
+        "email": "support@astriaindex.com"
+      },
+      "homepage": "https://astriaindex.com",
+      "repository": "https://github.com/PL-ODIN/astria-plugin",
+      "license": "MIT",
+      "keywords": ["memory", "mcp", "persistent", "recall", "sessions", "knowledge"],
+      "category": "productivity",
+      "tags": ["memory", "knowledge-management", "mcp-server", "persistent-context"]
+    }
+  ]
+}
