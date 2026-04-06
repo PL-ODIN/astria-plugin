@@ -23,10 +23,7 @@ sse_url = ENDPOINT.rstrip("/")
 if not sse_url.endswith("/sse"):
     sse_url += "/sse"
 
-mcp = FastMCP(
-    "Astria",
-    description="Persistent AI memory — neural pathway architecture for cross-session recall, contextual awareness, and memory promotion.",
-)
+mcp = FastMCP("Astria")
 
 
 # Define all 14 Astria tools with their schemas for inspection.
