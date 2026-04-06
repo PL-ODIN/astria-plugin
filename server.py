@@ -230,8 +230,14 @@ async def _proxy(tool_name: str, **kwargs) -> str:
         transport = SSETransport(sse_url, headers=headers)
         async with Client(transport) as client:
             result = await client.call_tool(tool_name, kwargs)
-            if result and len(result) > 0:
-                return result[0].text if hasattr(result[0], 'text') else str(result[0])
+            # FastMCP 3.2: result is CallToolResult with .content list
+            if hasattr(result, 'content'):
+                parts = result.content
+                if parts and len(parts) > 0:
+                    return parts[0].text if hasattr(parts[0], 'text') else str(parts[0])
+            # Fallback for older API
+            if hasattr(result, 'text'):
+                return result.text
             return str(result)
     except Exception as e:
         return f"Connection error: {e}. Verify your ASTRIA_ENDPOINT and ASTRIA_API_KEY."
